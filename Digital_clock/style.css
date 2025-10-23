@@ -7,17 +7,23 @@
 body {
     background-color: #212121;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white; /* Added a base text color for better readability */
+    line-height: 1.6; /* Improved default line spacing */
 }
 
 header {
     width: 100%;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, #333, #444);
+    background: linear-gradient(90deg, #3a3a3a, #2c2c2c); /* Darker, more subtle gradient */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Softer, more pronounced shadow */
     color: white;
+    position: fixed; /* Made header sticky to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures header stays on top of other content */
 }
 
 .logo {
@@ -25,20 +31,27 @@ header {
     font-weight: bold;
 }
 
+nav {
+    display: flex;
+    gap: 0.5rem; /* Used gap for cleaner spacing between nav items */
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     background: linear-gradient(to right, #525252, #7d7c7d);
-    padding: 4px 6px;
+    padding: 6px 12px; /* Adjusted padding for a better button feel */
     border: none;
     border-radius: 5px;
 }
 
 nav a:hover {
-    color: #a9a9a9;
+    color: #f0f0f0;
+    transform: translateY(-2px); /* Added a subtle lift effect on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .content-container {
@@ -47,7 +60,8 @@ nav a:hover {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding-top: 5rem;
+    padding: 8rem 2rem 2rem; /* Adjusted top padding to account for the fixed header */
+    text-align: center;
 }
 
 .LinkedIn {
@@ -73,12 +87,19 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 7rem;
+    padding: 2rem; 
+    position: relative;
+    width: 100%;
+    min-height: 100vh; 
 }
 
 #clock {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: relative; 
     margin-top: 3rem;
-    padding: 5rem 2rem;
+    padding: 2rem; 
     background: linear-gradient(45deg, #ff4e50, #f9d423);
     color: white;
     border-radius: 50%;
@@ -88,6 +109,51 @@ main{
     width: 200px;
     height: 200px;
     text-align: center;
-    
+    animation: floating 4s ease-in-out infinite ; 
+}
 
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 0 32px orangered;
+    }
+    50% {
+        transform: translateY(-15px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 19px green;
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0 0 32px orangered;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 0 0.5rem;
+    }
+
+    main {
+        padding-top: 10rem;
+    }
+
+    #clock {
+        width: 160px; 
+        height: 160px;
+        font-size: 1.2rem;
+    }
 }

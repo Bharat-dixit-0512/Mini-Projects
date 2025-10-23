@@ -7,24 +7,23 @@
 body {
     background-color: #212121;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white; /* Added a base text color for better readability */
-    line-height: 1.6; /* Improved default line spacing */
+    color: white; 
+    line-height: 1.6; 
 }
 
 header {
     width: 100%;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, #3a3a3a, #2c2c2c); /* Darker, more subtle gradient */
+    background: linear-gradient(90deg, #3a3a3a, #2c2c2c); 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Softer, more pronounced shadow */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     color: white;
-    position: fixed; /* Made header sticky to the top */
+    position: fixed; 
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensures header stays on top of other content */
-}
+    z-index: 1000; }
 
 .logo {
     font-size: 1.8rem;
@@ -33,7 +32,7 @@ header {
 
 nav {
     display: flex;
-    gap: 0.5rem; /* Used gap for cleaner spacing between nav items */
+    gap: 0.5rem;
 }
 
 nav a {
@@ -43,14 +42,14 @@ nav a {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     background: linear-gradient(to right, #525252, #7d7c7d);
-    padding: 6px 12px; /* Adjusted padding for a better button feel */
+    padding: 6px 12px;
     border: none;
     border-radius: 5px;
 }
 
 nav a:hover {
     color: #f0f0f0;
-    transform: translateY(-2px); /* Added a subtle lift effect on hover */
+    transform: translateY(-2px); 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -60,7 +59,7 @@ nav a:hover {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding: 8rem 2rem 2rem; /* Adjusted top padding to account for the fixed header */
+    padding: 8rem 2rem 2rem;
     text-align: center;
 }
 
